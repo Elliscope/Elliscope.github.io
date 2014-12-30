@@ -1,0 +1,44 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: url(gallery/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.main {
+	margin: 0 20px;
+}
+
+.profile_img{
+	height: 200px;
+	width:  200px;
+}
+
+#contact_text{
+    text-align: center;
+	color: green;
+}
+
+h4 {
+    font-size: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.center{
+  text-align: center;
+}
+
+#gallery_text{
+    text-align: center;
+}
+
