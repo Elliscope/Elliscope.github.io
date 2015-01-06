@@ -2,7 +2,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   background: url(gallery/1.jpg);
-  background-size: 1500px 800px;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -42,3 +42,7 @@ ul {
     text-align: center;
 }
 
+.gallery_img{
+  height: 300px;
+  width: 800px;
+}
