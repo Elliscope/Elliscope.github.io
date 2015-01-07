@@ -18,10 +18,27 @@ $(window).load(function() {
 	$("#l_gallery").click(function() {
 		$(".section").hide();
 		$("#gallery").show();
+		$(".session").hide();
+		$("#first_pro").show();
+
 	});
 	$("#l_life").click(function() {
 		$(".section").hide();
 		$("#life").show();
+	});
+
+   $("#firstpro").click(function() {
+		$(".session").hide();
+		$("#first_pro").show();
+	});
+
+   $("#seconpro").click(function() {
+		$(".session").hide();
+		$("#secon_pro").show();
+	});
+   $("#thirdpro").click(function() {
+		$(".session").hide();
+		$("#third_pro").show();
 	});
 	
 });
