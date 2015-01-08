@@ -23,6 +23,15 @@
   <div>
   <body><div class="container">
 
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=911933118834586&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
       <!-- Static navbar -->
       <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
@@ -91,6 +100,8 @@
 
           <p>I participated in three Hackathon in first semester of the Sophomore year and it was a lot of fun. I picked up HTML, CSS, Javascript and played with Google Calendar and Twitter API during those memorable experience. Currently I'm looking for software related internship for the upcoming summer. 
           </p>
+
+          <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
        	</div>   
        </div>  
@@ -331,10 +342,7 @@
                     </li>
                     <li>
                         <a href="#"><div class="gallery_picture" style="background-image:url(gallery/2013FallSanFranDB.jpg);" onclick="image_open(this)"></div></a>
-                    </li>
-                    <li>
-                        <a href="#"><div class="gallery_picture" style="background-image:url(gallery/sunshine.jpg);" onclick="image_open(this)"></div></a>
-                    </li>
+                    </li> 
                 </ul>
             </div>
         </div>
