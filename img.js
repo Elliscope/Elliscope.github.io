@@ -7,7 +7,7 @@ function image_open(mySource) {
     document.getElementById('viewer_link').href = myURL;
 }
 function image_close() {
-    document.getElementById('viewer').style.opacity = '0';
+    document.getElementById('viewer').style.opacity = '1';
     document.getElementById('viewer').style.filter = 'alpha(opacity=0)';
     document.getElementById('viewer').style.visibility = 'hidden';
 }
