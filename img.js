@@ -9,5 +9,6 @@ function image_close() {
     document.getElementById('viewer').style.opacity = '0';
     document.getElementById('viewer').style.filter = 'alpha(opacity=0)';
     document.getElementById('viewer').style.visibility = 'hidden';
+    
 }
 
