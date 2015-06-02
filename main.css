@@ -1,7 +1,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: url(gallery/1.jpg);
+  background: url(rgba(255, 0, 0,0.5));
   background-size: cover;
   background-repeat: no-repeat;
   color: #FFF;
