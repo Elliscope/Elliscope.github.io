@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Image Draggable</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link href="main.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<div>
+  <img src="gallery/drlogo.jpg" id="drlogo" class = "drlogo">
+</div>
+
+<!-- 
+<div id="draggable" style="position:absolute" class ="MenuPos">
+  <img src="gallery/dr1.jpg" class ="imgIcon" onclick="temp()" >
+</div>
+ -->
+
+
+
+<!-- <div id="draggable" style="margin-top: 70px;margin-left: 350px;left: 100px;top: 80px;" >
+    <img src="gallery/dr1.jpg"  onclick="temp()" class="imgIcon"  >
+</div>
+ -->
+<div>
+<div id="dr1" style="margin: 50px;margin-left: 750px;left: 250px;top: 80px;">
+    <img align="top" src="gallery/dr1.jpg"  id= "img1" onclick="expand1()" class="imgIcon" style=" border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;">
+</div>
+
+<!-- <div id="dr2" style="margin: 50px;margin-left: 350px;right: 400px;">
+    <img align="right" src="gallery/dr2.jpg"  id= "img2" onclick="expand2()" class="imgIcon" style=" border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;">
+</div> -->
+
+<div id="dr2" style="margin: 50px; left: 400px;">
+    <img align="right" src="gallery/dr2.jpg"   id= "img2" onclick="expand2()" class="imgIcon" style=" border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;">
+</div>
+
+<div id="dr3" style="margin: 50px; left: 400px;">
+    <img align="bottom" src="gallery/dr3.jpg"   id= "img3" onclick="expand3()" class="imgIcon" style=" border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;">
+</div>
+
+<div id="dr4" style="margin: 50px;margin-left: 750px;left: 100px;">
+    <img  src="gallery/dr4.jpg"   id= "img4" onclick="expand4()" class="imgIcon" style=" border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;">
+</div>
+
+</div>
+ 
+
+
+
+<div id="backButton">
+  <img src="gallery/backbutton.png" onclick="backButton()" style="height: 50px; width: 100px;position:absolute; left: 0;bottom:0">
+</div>
+
+
+<script src="index.js"></script>
+<script src="main.js"></script>
+
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="jquery.draggableTouch.js"></script>
+
+ 
+</body>
+</html>
