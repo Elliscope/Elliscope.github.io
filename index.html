@@ -1,81 +1,79 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Image Draggable</title>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <link href="main.css" rel="stylesheet">
 
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<style> 
+#my-element {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  padding: 1em;
+  background: tomato;
+  color: #FFF;
+  font-size: 2em;
+  text-align: center;
+}
 
+body{
+    background-color: rgba(0,255,0,1);
+}
+
+</style>
 </head>
-<body>
+<body class ="backGroundAni">
+
+<div id="my-element">Click to start</div>
+
+</body>
+
+<script>
+
+var elem = document.getElementById('my-element'),
+    startTime = null,
+    endPos = 500, // in pixels
+    duration = 2000; // in milliseconds
+
+var timeDif = null;
+var r,g,b,a = null;
+
+function render(time) {
+  if (time === undefined) {
+    time = new Date().getTime();
+  }
+
+  if (startTime === null) {
+    startTime = time;
+  }
+
+  timeDif = ((time-startTime))/duration;
+  console.log(timeDif);
+  r = Math.abs(255*timeDif)%255;
+  g = Math.abs(255*(1-timeDif))%255;
+  a = Math.abs(1*timeDif)%1;
+  console.log("r value :" +r);
+  console.log("g value: " + g);
+  console.log("a value : "+ a);
 
 
-<div>
-  <img src="gallery/drlogo.jpg" id="drlogo" class = "drlogo">
-</div>
+  elem.style.left = (timeDif * endPos % endPos) + 'px';
+  $("#backGroundAni").css({'background-color':'rgba(r,g,0,a)'});
 
-<!-- 
-<div id="draggable" style="position:absolute" class ="MenuPos">
-  <img src="gallery/dr1.jpg" class ="imgIcon" onclick="temp()" >
-</div>
- -->
-
-
-
-<!-- <div id="draggable" style="margin-top: 70px;margin-left: 350px;left: 100px;top: 80px;" >
-    <img src="gallery/dr1.jpg"  onclick="temp()" class="imgIcon"  >
-</div>
- -->
-<div>
-<div id="dr1" style="margin: 50px;margin-left: 750px;left: 250px;top: 80px;">
-    <img align="top" src="gallery/dr1.jpg"  id= "img1" onclick="expand1()" class="imgIcon" style=" border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;">
-</div>
-
-<!-- <div id="dr2" style="margin: 50px;margin-left: 350px;right: 400px;">
-    <img align="right" src="gallery/dr2.jpg"  id= "img2" onclick="expand2()" class="imgIcon" style=" border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;">
-</div> -->
-
-<div id="dr2" style="margin: 50px; left: 400px;">
-    <img align="right" src="gallery/dr2.jpg"   id= "img2" onclick="expand2()" class="imgIcon" style=" border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;">
-</div>
-
-<div id="dr3" style="margin: 50px; left: 400px;">
-    <img align="bottom" src="gallery/dr3.jpg"   id= "img3" onclick="expand3()" class="imgIcon" style=" border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;">
-</div>
-
-<div id="dr4" style="margin: 50px;margin-left: 750px;left: 100px;">
-    <img  src="gallery/dr4.jpg"   id= "img4" onclick="expand4()" class="imgIcon" style=" border-radius: 150px;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;">
-</div>
-
-</div>
+  bound.BufferBigmap();       
+}
  
+elem.onclick = function() {
+  (function animationLoop(){
+    render();
+    requestAnimationFrame(animationLoop, elem);
+  })();
+};
 
 
 
-<div id="backButton">
-  <img src="gallery/backbutton.png" onclick="backButton()" style="height: 50px; width: 100px;position:absolute; left: 0;bottom:0">
-</div>
+</script>
 
-
-<script src="index.js"></script>
-<script src="main.js"></script>
-
-<script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script src="jquery.draggableTouch.js"></script>
-
- 
-</body>
 </html>
