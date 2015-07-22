@@ -1,13 +1,27 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: url(gallery/1.jpg);
+  background: url(gallery/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: #FFF;
+  overflow: hidden;
 
 
 }
+
+/*#bg{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+#g_img{
+    height: 100%;
+    width: 100%
+}*/
 
 real{
   position: relative;
@@ -24,6 +38,7 @@ real{
 .profile_img{
 	height: 200px;
 	width:  200px;
+    border-radius: 20px;
 }
 
 #contact_text{
