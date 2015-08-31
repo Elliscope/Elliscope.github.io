@@ -38,6 +38,7 @@ $(window).load(function() {
 		$("#fb_like_button").show();
 	});
 
+
    $("#seconpro").click(function() {
 		$(".session").hide();
 		$("#secon_pro").show();
