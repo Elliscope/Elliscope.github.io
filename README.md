@@ -1,4 +1,1 @@
-Elliscope.github.io
-===================
-
-Website
+Website for USC Special Events Committee
